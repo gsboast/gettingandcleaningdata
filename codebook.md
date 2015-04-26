@@ -11,7 +11,7 @@ The data sets used in this project are avaiable from the following site[1]:
 
 ###R Data Transformations
 
-> As part of this project, the folloeing transformations and coversions were made to the original UCI HAR data set via donwloading the original files and then using a run_analysis.R script to combine and transform the data as follows:
+> As part of this project, the following transformations and coversions were made to the original UCI HAR data set via donwloading the original files and then using a run_analysis.R script to combine and transform the data as follows:
 
 #### Data files -
 * Combined the './train/X_train.txt' Training set with './test/X_test.txt Test set.
@@ -29,16 +29,16 @@ The data sets used in this project are avaiable from the following site[1]:
 ####  Cleaning Steps to deliver final tidydata.txt
 * A data frame was created called data_pre_tidy, which was the union of the subjects, activities, and 66 data variables of the mean() and std() variables extracted from the possible 561 total variables in the test data sets. The following operations were performed to clean the source data to adhere to tidy data principles:
 
-1. All subject observations were summarized as one row for each of the six activities per subject with and all variable values appearing in one of 66 columns for a newly calculated mean of the mean() and std() variables. The final data set's dimensions are 180 x 68 = 30 subjects * 6 activities X 66 mean data variables for each.
-2. Special caharters were removed (Dashes, underscores, parantheses, commas, et.c)
-3. While all lowercase is preferred by tidy data principles, CamelCase was used, which is the practice of naming complex variable names such that each word or abbreviation begins with a capital letter, with the exception of the first word, which is an accepted R programming variable naming convention. 
+1. All subject observations were summarized as one row for each of the six activities per subject with and all variable values appearing in one of 66 columns for a newly calculated mean of the mean() and std() variables. The final data set's dimensions are 180 x 68 = 30 subjects * 6 activities X 66 mean data variables for each
+2. Special characters were removed (Dashes, underscores, parantheses, commas, etc.)
+3. While all lowercase is preferred by tidy data principles, CamelCase was used, which is the practice of naming complex variable names such that each word or abbreviation begins with a capital letter, with the exception of the first word, which is an accepted R programming variable naming convention
 4. All data variables were remaned to make them more descriptive and meaningful as in the following example:
 >    tGravityAcc-mean()-Z -> timeGravityAccMeanZ 
 * t was repalced with time for time-base variables
 * f was replaced with freq for frequency-based variables
 * X, Y, and Z coordinate variables are easily identified
 
-5. The subjects, activities, and the means of each mean() and std() variables were finally comined into one ourput file. TidyData.txt whihc could be read into R with the read.table() function. 
+5. The subjects, activities, and the means of each mean() and std() variables were finally comined into one ourput file. TidyData.txt whihc could be read into R with the read.table() function
 
 ###Variables appearing in final tidy data set and their meaning, values, and data types:
 
@@ -48,7 +48,7 @@ The data sets used in this project are avaiable from the following site[1]:
 
 ######Values:
 > Integer data type
-* (1:30)
+* Range (1:30)
 
 
 ####Activity - volunteer's physical task at the time sensor reading was taken
@@ -67,7 +67,7 @@ The data sets used in this project are avaiable from the following site[1]:
 
 #### Features 
 
-The R sciprt took the column means of the 66 selected features for the follwoing feature vraibles for each subject/activity pair. The original feature variables, from which the column means were caluclated for the subject activity pairs, can be described as:
+The R script took the column means of the 66 selected features for the following feature variables for each subject/activity pair. The original feature variables, from which the column means were caluclated for the subject activity pairs, can be described as:
 
 * The accelerometer and gyroscope 3-axial raw signals tAcc-XYZ and tGyro-XYZ. These time domain signals (prefix 't' to denote time) were captured at a constant rate of 50 Hz. Then they were filtered using a median filter and a 3rd order low pass Butterworth filter with a corner frequency of 20 Hz to remove noise. Similarly, the acceleration signal was then separated into body and gravity acceleration signals (tBodyAcc-XYZ and tGravityAcc-XYZ) using another low pass Butterworth filter with a corner frequency of 0.3 Hz. 
 
@@ -81,7 +81,7 @@ The R sciprt took the column means of the 66 selected features for the follwoing
 
 >freq-based
 
->Mean features of the Means and Std. Deviations of Frequency (freq) Accelerometer - Total Acceleration (Acc) for Body Linear (Body) Jerk (Jerk) signals Magnitude(Mag) Mean and Standard Deviaiton includeding X, Y, and Z coordinate values:  		
+>Mean features of the Means and Std. Deviations of Frequency (freq) Accelerometer - Total Acceleration (Acc) for Body Linear (Body) Jerk (Jerk) signals Magnitude (Mag) Mean and Standard Deviation including X, Y, and Z coordinate values:  		
 
 * freqBodyAccJerkMagMean			
 * freqBodyAccJerkMagStd			
