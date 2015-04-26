@@ -32,14 +32,14 @@ The data sets used in this project are avaiable from the following site[1]:
 1. All subject observations were summarized as one row for each of the six activities per subject with and all variable values appearing in one of 66 columns for a newly calculated mean of the mean() and std() variables. The final data set's dimensions are 180 x 68 = 30 subjects * 6 activities X 66 mean data variables for each
 2. Special characters were removed (i.e., dashes, underscores, parantheses, commas, etc.)
 3. While all lowercase is preferred by tidy data principles, camelCase was used, which is the practice of naming complex variable names such that each word or abbreviation begins with a capital letter, with the exception of the first word, which is an accepted R programming variable naming convention
-4. All data variables were remaned to make them more descriptive and meaningful as in the following example:
+4. All data variables were renaned to make them more descriptive and meaningful as in the following example:
 
 >    tGravityAcc-mean()-Z -> timeGravityAccMeanZ 
 
-5 t was replaced with time for time-base variables
-6 f was replaced with freq for frequency-based variables
-7 X, Y, and Z coordinate variables are identifiable by keeping in uppercase
-8. The subjects, activities, and the means of each mean() and std() variables were finally comined into one ourput file. TidyData.txt whihc could be read into R with the read.table() function
+* t was replaced with time for time-base variables
+* f was replaced with freq for frequency-based variables
+* X, Y, and Z coordinate variables are identifiable by keeping in uppercase
+* The subjects, activities, and the means of each mean() and std() variables were finally comined into one ourput file. TidyData.txt whihc could be read into R with the read.table() function
 
 ###Variables appearing in final tidy data set, their meaning, values, and data types:
 
