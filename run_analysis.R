@@ -39,10 +39,10 @@
         # to retain meaning
        
         names(df_data)  <- gsub("\\(|\\)|\\)|\\(", "", df_features[isolate_col_idx, 2])   # Eliminate '()'
-        names(df_data)  <- gsub(",", "", names(df_data))                      # Eliminate commas ','     
+        names(df_data)  <- gsub(",", "", names(df_data))                      # Eliminate commas ','        
         names(df_data)  <- gsub("tBody", "timeBody", names(df_data))          # Add 'time' to time-based
-    	  names(df_data)  <- gsub("tGravity", "timeGravity", names(df_data))    # Add 'time' to more time-based 
-	      names(df_data)  <- gsub("fBody", "freqBody", names(df_data))          # Add 'freq' to frequency-based 
+        names(df_data)  <- gsub("tGravity", "timeGravity", names(df_data))    # Add 'time' to more time-based 
+        names(df_data)  <- gsub("fBody", "freqBody", names(df_data))          # Add 'freq' to frequency-based 
         names(df_data)  <- gsub("fbody", "freqBody", names(df_data))          # Add 'freq' to more frequency-based 
         names(df_data)  <- gsub("-", "", names(df_data))                      # Eliminate embedded dashes '-'
         names(df_data)  <- gsub("BodyBody","Body",names(df_data))             # Eliminate redundant 'Body'
@@ -59,24 +59,25 @@
 
         # Number 4 -  Appropriately label the data set with descriptive variable names. 
         # Rename variables / column headings appropriately with the dplyr function select()
-        # then bind the subjects and activities with the numeric value data set
+        # then bind the subjects and activities with the numeric value data set to create
+        # the preliminary data frame to be used in the final step
 
         names(df_subjects)   <- "subject"
         names(df_labels)     <- "activity"
         activity_vector      <- c("code","activity")
-	      names(df_activities) <- activity_vector
-
+        names(df_activities) <- activity_vector
+        df_pre_tidy          <- cbind(df_subjects, df_labels, df_data)
+    
         # Number 5 - From the data set in step 4, create a second, independent tidy data set 
         # with the average of each variable for each activity and each subject. Uses a
         # nested for next loop to pass each subject and each activity to calc average of 
         # the 66 mean and std variables for each subject activity pair observation. 
-
+          
         distinctsubjects     <- distinct(select (df_subjects,subject ))
         distinctsubjects     <- sort(distinctsubjects[, 1])  #  Sorted subjects for nested loop
         totalsubjects        <- length(distinctsubjects)
         totalactivities      <- dim(distinct(select (df_activities,activity )))[1]
         totalobservations    <- totalsubjects  *totalactivities                                     
-        df_pre_tidy          <- cbind(df_subjects, df_labels, df_data)
         totfeatures          <- dim(df_pre_tidy)[2]
 
         df_tidy = df_pre_tidy[1:(totalobservations), ]
