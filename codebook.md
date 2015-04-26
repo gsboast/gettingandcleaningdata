@@ -112,8 +112,10 @@ The R script took the column means of the 66 selected features for the following
 * freqBodyGyroMeanZ			
 * freqBodyGyroStdX			
 * freqBodyGyroStdY			
-* freqBodyGyroStdZ			
+* freqBodyGyroStdZ
+			
 >	Time Based Body Accelerometer Sensor Toatl Acceleartion Jerk signals and Magnitude and mean and std calcs. 
+
 * timeBodyAccJerkMagMean			
 * timeBodyAccJerkMagStd			
 * timeBodyAccJerkMeanX			
@@ -130,7 +132,9 @@ The R script took the column means of the 66 selected features for the following
 * timeBodyAccStdX			
 * timeBodyAccStdY			
 * timeBodyAccStdZ			
+
 >	Time Based Body Gyroscopic (Gyro) Sensor for jerk signals to include the overall magnitude, mean and std and the indiviudal X-Y-Z coordinate direction values.
+
 * timeBodyGyroJerkMagMean			
 * timeBodyGyroJerkMagStd			
 * timeBodyGyroJerkMeanX			
@@ -147,8 +151,9 @@ The R script took the column means of the 66 selected features for the following
 * timeBodyGyroStdX			
 * timeBodyGyroStdY			
 * timeBodyGyroStdZ	
-> 
+ 
 >Time Based Gravity Accelerometer signals: total acceleration magnitude (Mag), Mean, and Std overall and for the X-Y-Z coordinate directions. 
+
 * timeGravityAccMagMean			
 * timeGravityAccMagStd			
 * timeGravityAccMeanX			
