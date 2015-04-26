@@ -1,17 +1,17 @@
 ##Code Book for Getting and Cleaning Data - gsboast April 2015 
 ### run_analysis.R - 
-Using the the University of California Irvine (UCI) Human Activity Recognition (HAR) Smartphones data sets, a series of cleaning and tidying steps were performed to produce a final tidy data set file that could be used for further analysis consisting of the means of all related mean() and standard deviation, or std(), feature variables in the original data sets.
+Using the University of California Irvine (UCI) Human Activity Recognition (HAR) Smartphones data sets, a series of cleaning and tidying steps were performed to produce a final tidy data set file that could be used for further analysis consisting of the means of all related mean() and standard deviation, or std(), feature variables in the original data sets.
 
 ##### Citation of Data Source
 
 The data sets used in this project are avaiable from the following site[1]:
 <http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones>
 
-##### Use of the UCI HAR data requires the follwoing citation: [1] Davide Anguita, Alessandro Ghio, Luca Oneto, Xavier Parra and Jorge L. Reyes-Ortiz. Human Activity Recognition on Smartphones using a Multiclass Hardware-Friendly Support Vector Machine. International Workshop of Ambient Assisted Living (IWAAL 2012). Vitoria-Gasteiz, Spain. Dec 2012
+##### Use of the UCI HAR data requires the following citation: [1] Davide Anguita, Alessandro Ghio, Luca Oneto, Xavier Parra and Jorge L. Reyes-Ortiz. Human Activity Recognition on Smartphones using a Multiclass Hardware-Friendly Support Vector Machine. International Workshop of Ambient Assisted Living (IWAAL 2012). Vitoria-Gasteiz, Spain. Dec 2012
 
 ###R Data Transformations
 
-> As part of this project, the following transformations and coversions were made to the original UCI HAR data set via downloading the original files and then using a run_analysis.R script to combine and transform the data as follows:
+> As part of this project, the following transformations and conversions were made to the original UCI HAR data set via downloading the original files and then using a run_analysis.R script to combine and transform the data as follows:
 
 #### Data files -
 * Combined the './train/X_train.txt' Training set with './test/X_test.txt Test set.
@@ -24,15 +24,15 @@ The data sets used in this project are avaiable from the following site[1]:
 * Loaded and cleaned 'all_activity.txt' into lowercase variable names.
 
 #### Features
-* The 561 possible features were narrowed down to a specific 66 varibles related to  pure mean and standard deviation variables. 
+* The 561 possible features were narrowed down to a specific 66 variables related to  pure mean and standard deviation variables. 
 
 ####  Cleaning Steps to deliver final tidydata.txt
 * A data frame was created called data_pre_tidy, which was the union of the subjects, activities, and 66 data variables of the mean() and std() variables extracted from the possible 561 total variables in the test data sets. The following operations were performed to clean the source data to adhere to tidy data principles:
 
 1. All subject observations were summarized as one row for each of the six activities per subject with and all variable values appearing in one of 66 columns for a newly calculated mean of the mean() and std() variables. The final data set's dimensions are 180 x 68 = 30 subjects * 6 activities X 66 mean data variables for each
-2. Special characters were removed (i.e., dashes, underscores, parantheses, commas, etc.)
-3. While all lowercase is preferred by tidy data principles, camelCase was used, which is the practice of naming complex variable names such that each word or abbreviation begins with a capital letter, with the exception of the first word, which is an accepted R programming variable naming convention
-4. All data variables were renaned to make them more descriptive and meaningful as in the following example:
+2. Special characters were removed (i.e., dashes, underscores, parentheses, commas, etc.)
+3. While all lower-case is preferred by tidy data principles, camelCase was used, which is the practice of naming complex variable names such that each word or abbreviation begins with a capital letter, with the exception of the first word, which is an accepted R programming variable naming convention
+4. All data variables were renamed to make them more descriptive and meaningful as in the following example:
 
 >    tGravityAcc-mean()-Z -> timeGravityAccMeanZ 
 
