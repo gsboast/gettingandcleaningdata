@@ -112,7 +112,7 @@ The R script took the column means of the 66 selected features for the following
 * freqBodyGyroStdY			
 * freqBodyGyroStdZ
 			
-> The mean of the Time domain Body Accelerometer Sensor, Total Acceleration, and Jerk signals and corresponding Magnitude (Mag) and mean and std. readings including X-Y-Z directional coordinate values for the associated subject/activity pairs were named as follows:
+> The average of the Time domain Body Accelerometer Sensor, Total Acceleration, and Jerk signals and corresponding Magnitude (Mag) and mean and std. readings including X-Y-Z directional coordinate values for the associated subject/activity pairs were named as follows:
 
 * timeBodyAccJerkMagMean			
 * timeBodyAccJerkMagStd			
