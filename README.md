@@ -10,7 +10,7 @@
 
 > Usage
 
-* On the local client machine creates a directory named 'data' under the R working directory
+* On the local client machine create a directory named 'data' under the R working directory. When the files from the website belwo are expanded in this sub-folder, several other additional sub-folders will be created. The sub-directory under the working directory is created to keep the R working directory clean.
 * Download the source data sets from: <https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip> into the data directory defined above
 * Uncompress or expand these .zip files into the subdirectory above using the appropriate software
 * Save the run_analysis.R processing script to the current R environment working directory.
