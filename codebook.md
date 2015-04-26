@@ -1,4 +1,4 @@
-##Code Book for Getting and Cleaning Data - gsboast April 2015
+##Code Book for Getting and Cleaning Data - gsboast April 2015 
 ### run_analysis.R - 
 Using the the University of California Irvine (UCI) Human Activity Recognition (HAR) Smartphones data sets, a series of cleaning and tidying steps were performed to output a final tidy data set file that could be used for further analysis consisting of the means of all related mean() and standard deviation,or std(), feature variables in the original data sets.
 
