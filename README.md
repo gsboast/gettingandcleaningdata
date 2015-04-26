@@ -4,13 +4,13 @@
 
 1. Merges the training and the test sets to create one data set.
 2. Extracts only the measurements on the mean and standard deviation for each measurement. 
-3. Uses descriptive activity names to name the activities in the data set
+3. Uses descriptive activity names to name the activities in the data set.
 4. Appropriately labels the data set with descriptive variable names. 
-5. From the data set the step above, creates a second, independent tidy data set with the average of each variable for each activity and each subject named tidydata.txt, which appears in the Coursera assignment web page and is included in the GitHub repo as well. 
+5. From the data set the step above, creates a second, independent tidy data set with the average of each variable for each activity and each subject named tidydata.txt, which appears in the Coursera assignment web page and is also included in this GitHub repo as well. 
 
 > Usage
 
-* On the local client machine create a directory named 'data' under the R working directory. When the files from the website belwo are expanded in this sub-folder, several other additional sub-folders will be created. The sub-directory under the working directory is created to keep the R working directory clean.
+* On the local client machine create a directory named 'data' under the R working directory. When the files from the website below are expanded in this sub-folder, several other additional sub-folders will be created. The sub-directory under the working directory is created to keep the R working directory clean. The script will work if the data sub-folder exists, as it uses relative pathnames for all the other UCI data files and sub-folders. 
 * Download the source data sets from: <https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip> into the data directory defined above
 * Uncompress or expand these .zip files into the subdirectory above using the appropriate software
 * Save the run_analysis.R processing script to the current R environment working directory.
