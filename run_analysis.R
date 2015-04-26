@@ -93,7 +93,7 @@
              }
         }
         tidy_out <- arrange(df_tidy, subject, activity)
-        write.table(tidy_out, "tidydata.txt", row.names=false)
+        write.table(tidy_out, "tidydata.txt", row.names=FALSE)
 
 
      
